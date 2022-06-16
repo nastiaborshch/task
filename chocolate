@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+
+        public static void Raschet(int money)
+        {            
+            int shokolad = money;
+            int result = money;
+            int pro = 0;
+            while (shokolad > 2)
+            {
+                pro = shokolad % 3;
+                shokolad /= 3;                
+                result+=shokolad;
+                shokolad+=pro;
+            }
+            Console.WriteLine(" {0} шоколадки", result);
+        }
+        static void Main(string[] args)
+        {          
+            Console.Write("Сумма:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Raschet(m);
+            Console.ReadLine();
+        }
+    }
+}
